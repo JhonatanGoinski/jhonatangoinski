@@ -20,7 +20,7 @@ export function Hero() {
             JG
           </div>
           <h1 className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-slate-900 to-slate-600 dark:from-slate-100 dark:to-slate-400 bg-clip-text text-transparent">
-            Dev. Jhonatan Goinski
+            Jhonatan Goinski
           </h1>
           <p className="text-xl md:text-2xl text-slate-600 dark:text-slate-300 mb-2">
             Desenvolvedor Full Stack
