@@ -132,9 +132,9 @@ export function Projects() {
       description:
         "Desenvolvimento de um aplicativo de postagem de conteúdo, permitindo que o usuário poste seu conteúdo e compartilhe com  os usuários. Podendo realizar diversos posts e interagir com likes.",
       images: [
-        "/devPost1.png?height=200&width=400&text=DevPost",
-        "/devPost2.png?height=200&width=400&text=DevPost",
-        "/devPost3.png?height=200&width=400&text=DevPost",
+        "/devpost1.png?height=200&width=400&text=DevPost",
+        "/devpost2.png?height=200&width=400&text=DevPost",
+        "/devpost3.png?height=200&width=400&text=DevPost",
       ],
       technologies: [
         "JavaScript",
