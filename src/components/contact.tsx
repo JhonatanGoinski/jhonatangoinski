@@ -12,7 +12,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { Mail, Phone, MapPin, Send, Download } from "lucide-react";
 import { useToast } from "@/components/ui/use-toast";
 
 export function Contact() {
@@ -83,6 +83,22 @@ export function Contact() {
     }));
   };
 
+  const handleDownloadCV = () => {
+    // Opção 1: Link direto para arquivo hospedado
+    const cvUrl = "./Curriculo_ Jhonatan_Miguel_Goinski.pdf"; // ← Coloque seu PDF na pasta public/
+
+    // Cria um link temporário para download
+    const link = document.createElement("a");
+    link.href = cvUrl;
+    link.download = "Curriculo_Jhonatan_Miguel_Goinski.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+
+    // Opção 2: Se preferir abrir em nova aba
+    // window.open(cvUrl, '_blank')
+  };
+
   return (
     <section id="contact" className="py-16 px-4">
       <div className="container mx-auto max-w-6xl">
@@ -126,6 +142,27 @@ export function Contact() {
                   Localização
                 </CardTitle>
                 <CardDescription>Curitiba, Brasil</CardDescription>
+              </CardHeader>
+            </Card>
+
+            {/* Download CV Card */}
+            <Card className="border-0 bg-gradient-to-r from-emerald-50 to-teal-50 dark:from-emerald-900/20 dark:to-teal-900/20 backdrop-blur-sm">
+              <CardHeader>
+                <CardTitle className="flex items-center text-slate-800 dark:text-slate-200">
+                  <Download className="mr-3 h-5 w-5 text-emerald-600" />
+                  Currículo
+                </CardTitle>
+                <CardDescription className="mb-4">
+                  Baixe meu currículo completo em PDF com todas as informações
+                  profissionais
+                </CardDescription>
+                <Button
+                  onClick={handleDownloadCV}
+                  className="w-full bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700"
+                >
+                  <Download className="mr-2 h-4 w-4" />
+                  Baixar Currículo
+                </Button>
               </CardHeader>
             </Card>
           </div>
@@ -198,6 +235,38 @@ export function Contact() {
               </form>
             </CardContent>
           </Card>
+        </div>
+        {/* Alternative Download Section */}
+        <div className="mt-12 text-center">
+          <div className="bg-gradient-to-r from-emerald-600/10 to-teal-600/10 dark:from-emerald-600/20 dark:to-teal-600/20 rounded-lg p-8">
+            <h3 className="text-2xl font-bold mb-4 text-slate-800 dark:text-slate-200">
+              Interessado em trabalhar comigo?
+            </h3>
+            <p className="text-slate-600 dark:text-slate-300 mb-6 max-w-2xl mx-auto">
+              Baixe meu currículo completo ou entre em contato diretamente para
+              discutirmos oportunidades de colaboração
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Button
+                onClick={handleDownloadCV}
+                size="lg"
+                className="bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700"
+              >
+                <Download className="mr-2 h-5 w-5" />
+                Baixar Currículo Completo
+              </Button>
+              <Button
+                variant="outline"
+                size="lg"
+                onClick={() =>
+                  window.open("mailto:jhonatan.goinski@email.com", "_blank")
+                }
+              >
+                <Mail className="mr-2 h-5 w-5" />
+                Enviar E-mail Direto
+              </Button>
+            </div>
+          </div>
         </div>
       </div>
     </section>
