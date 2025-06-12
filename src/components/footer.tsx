@@ -13,8 +13,10 @@ export function Footer() {
               Jhonatan Goinski
             </h3>
             <p className="text-slate-300 mb-4">
-              Desenvolvedor Full Stack apaixonado por criar soluções inovadoras
-              e experiências digitais excepcionais.
+              Desenvolvedor Full Stack especializado no design e implementação
+              de soluções digitais inovadoras, com foco na criação de
+              experiências de usuário excepcionais, utilizando tecnologias de
+              ponta tanto no front-end quanto no back-end.
             </p>
             <div className="flex space-x-4">
               <Button
