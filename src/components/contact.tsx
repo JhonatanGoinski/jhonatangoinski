@@ -259,7 +259,7 @@ export function Contact() {
                 variant="outline"
                 size="lg"
                 onClick={() =>
-                  window.open("mailto:jhonatan.goinski@email.com", "_blank")
+                  window.open("mailto:jhonatangoinski@gmail.com", "_blank")
                 }
               >
                 <Mail className="mr-2 h-5 w-5" />
