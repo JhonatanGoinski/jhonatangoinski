@@ -43,7 +43,17 @@ export function Skills() {
     {
       name: "Databases",
       icon: <Database className="h-6 w-6 text-emerald-600" />,
-      skills: ["Firebase", "SQL", "PostgreSQL", "MySQL", "Caso de uso"],
+      skills: [
+        "Caso de uso",
+        "SQL",
+        "MySQL",
+        "SQLite",
+        "SQLServer",
+        "PostgreSQL",
+        "MongoDB",
+        "Neon",
+        "Firebase",
+      ],
     },
     {
       name: "DevOps & Tools",
@@ -58,7 +68,7 @@ export function Skills() {
         "Comunicação",
         "Trabalho em Equipe",
         "Resolução de Problemas",
-        "Gestão de Projetos",
+        "Desenvolvimento de SaaS, Apps e Sites",
       ],
     },
     {
